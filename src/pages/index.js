@@ -165,7 +165,7 @@ export default function Home() {
     </div>
 
           {/* Right Side: Image */}
-          <div className="md:w-1/2 mt-8 md:mt-0">
+          <div className="md:w-1/2 mt-8 md:mt-0 ml-20">
             <Image
               src="/Images/about.png" 
               alt="About Quest2Go"
