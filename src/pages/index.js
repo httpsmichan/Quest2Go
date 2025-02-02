@@ -119,22 +119,21 @@ export default function Home() {
       </nav>
 
 
-      {/* Main Section  */}
-      <section id="main" className="min-h-screen flex items-center justify-center">
-        <div className="text-center px-4">
-         
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins' }}>
-            <span className="text-indigo-600">Bridging</span>{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">Research</span>{' '}
-            <span className="text-gray-800">Gaps</span>
-          </h1>
-          
-          
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-8" style={{ fontFamily: 'Quicksand' }}>
-            <span className="text-purple-600 font-semibold">Connect</span> •{' '}
-            <span className="text-indigo-600 font-semibold">Discover</span> •{' '}
-            <span className="text-blue-600 font-semibold">Share</span>
-          </p>
+     {/* Main Section */}
+<section id="main" className="min-h-screen flex items-center justify-center">
+  <div className="text-center px-4">
+    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins' }}>
+      <span className="text-indigo-600">Bridging</span>{' '}
+      {/* Replaced gradient with a solid color that matches the design */}
+      <span className="text-violet-600">Research</span>{' '}
+      <span className="text-gray-800">Gaps</span>
+    </h1>
+    
+    <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-8" style={{ fontFamily: 'Quicksand' }}>
+      <span className="text-purple-600 font-semibold">Connect</span> •{' '}
+      <span className="text-indigo-600 font-semibold">Discover</span> •{' '}
+      <span className="text-blue-600 font-semibold">Share</span>
+    </p>
           
           {/*Search Bar */}
           <div className="mt-8 max-w-md mx-auto sm:max-w-lg md:max-w-2xl">
