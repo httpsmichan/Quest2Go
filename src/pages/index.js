@@ -154,15 +154,15 @@ export default function Home() {
       <section id="about" className="min-h-screen bg-white flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
           {/* Text and Learn More Button */}
-          <div className="md:w-1/2">
-            <h2 className="text-3xl font-extrabold text-gray-900">About Quest2Go</h2>
-            <p className="mt-4 text-gray-600">
-              Quest2Go is a web-based mapping system designed to enhance access to unpublished research among academic institutions in Davao City. Our goal is to reduce barriers for researchers and foster collaboration.
-            </p>
-            <button className="mt-6 bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition-colors">
-              Learn More
-            </button>
-          </div>
+    <div className="md:w-1/2">
+      <h2 className="text-3xl font-extrabold text-gray-900">About Quest2Go</h2>
+      <p className="mt-4 text-gray-600">
+        Quest2Go is your gateway to discovering unpublished research treasures within Davao City's academic landscape. We bridge the gap between researchers, educators, and valuable academic work by creating an interconnected network of institutional research repositories. Our platform simplifies the process of finding, accessing, and collaborating on research projects, making previously hard-to-find academic work easily discoverable.
+      </p>
+      <button className="mt-6 bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition-colors">
+        Learn More
+      </button>
+    </div>
 
           {/* Right Side: Image */}
           <div className="md:w-1/2 mt-8 md:mt-0">
