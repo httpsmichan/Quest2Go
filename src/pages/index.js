@@ -119,12 +119,27 @@ export default function Home() {
       </nav>
 
 
-     {/* Main Section */}
-<section id="main" className="min-h-screen flex items-center justify-center">
-  <div className="text-center px-4">
+    {/* Main Section */}
+<section id="main" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  {/* Video Background */}
+  <div className="absolute inset-0 w-full h-full z-0">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="absolute min-w-full min-h-full object-cover w-full h-full"
+    >
+      <source src="/Background/bg.mp4" type="video/mp4" />
+    </video>
+    {/* Overlay to ensure text remains readable */}
+    <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+  </div>
+
+  {/* Existing Content - Now with z-index to appear above video */}
+  <div className="text-center px-4 relative z-10">
     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins' }}>
       <span className="text-indigo-600">Bridging</span>{' '}
-      {/* Replaced gradient with a solid color that matches the design */}
       <span className="text-violet-600">Research</span>{' '}
       <span className="text-gray-800">Gaps</span>
     </h1>
@@ -135,20 +150,20 @@ export default function Home() {
       <span className="text-blue-600 font-semibold">Share</span>
     </p>
           
-          {/*Search Bar */}
-          <div className="mt-8 max-w-md mx-auto sm:max-w-lg md:max-w-2xl">
-            <div className="flex items-center rounded-md shadow-xl bg-white/90 p-4 border-2 border-indigo-100 hover:border-indigo-300 transition-all backdrop-blur-sm">
-              <MagnifyingGlassIcon className="h-6 w-6 text-indigo-500" />
-              <input
-                type="text"
-                className="flex-grow p-2 focus:outline-none ml-2 placeholder-gray-400 bg-transparent text-gray-800"
-                placeholder="Search by keyword, author, institution, or research topic..."
-                style={{ fontFamily: 'Quicksand' }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Search Bar */}
+    <div className="mt-8 max-w-md mx-auto sm:max-w-lg md:max-w-2xl">
+      <div className="flex items-center rounded-md shadow-xl bg-white/90 p-4 border-2 border-indigo-100 hover:border-indigo-300 transition-all backdrop-blur-sm">
+        <MagnifyingGlassIcon className="h-6 w-6 text-indigo-500" />
+        <input
+          type="text"
+          className="flex-grow p-2 focus:outline-none ml-2 placeholder-gray-400 bg-transparent text-gray-800"
+          placeholder="Search by keyword, author, institution, or research topic..."
+          style={{ fontFamily: 'Quicksand' }}
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* About Section */}
       <section id="about" className="min-h-screen bg-white flex items-center justify-center">
