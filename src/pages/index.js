@@ -133,7 +133,7 @@ export default function Home() {
       <source src="/Background/bg.mp4" type="video/mp4" />
     </video>
     {/* Overlay to ensure text remains readable */}
-    <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+    <div className="absolute inset-0 "></div>
   </div>
 
   {/* Existing Content - Now with z-index to appear above video */}
