@@ -3,10 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
+import { useRouter } from 'next/router'; 
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
 
+  const handleLogin = (e) => {
+    e.preventDefault();
+    router.push('/admin');  // Redirect to /admin instead of /home
+  };
+  
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <Head>
@@ -16,22 +23,22 @@ export default function Login() {
 
       {/* Login Container */}
       <div className="bg-white shadow-lg rounded-lg overflow-hidden max-w-4xl w-full mx-4 md:mx-0 flex flex-col md:flex-row">
-      {/* Left Side: Login Form */}
-<div className="p-8 md:w-1/2">
-  <div className="flex items-center space-x-3 mb-6">
-    {/* Mobile Logo - Only shows on mobile */}
-    <Link href="/" className="md:hidden">
-      <Image
-        src="/Logo/q2glogo.png"
-        alt="Quest2Go Logo"
-        width={40}
-        height={40}
-        className="w-8 h-8 cursor-pointer"
-      />
-    </Link>
-    <h2 className="text-2xl font-bold text-gray-900">Login</h2>
-  </div>
-          <form className="space-y-6">
+        {/* Left Side: Login Form */}
+        <div className="p-8 md:w-1/2">
+          <div className="flex items-center space-x-3 mb-6">
+            {/* Mobile Logo - Only shows on mobile */}
+            <Link href="/" className="md:hidden">
+              <Image
+                src="/Logo/q2glogo.png"
+                alt="Quest2Go Logo"
+                width={40}
+                height={40}
+                className="w-8 h-8 cursor-pointer"
+              />
+            </Link>
+            <h2 className="text-2xl font-bold text-gray-900">Login</h2>
+          </div>
+          <form className="space-y-6" onSubmit={handleLogin}>
             {/* Email Input */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -101,7 +108,6 @@ export default function Login() {
         <div className="hidden md:flex bg-indigo-600 p-8 items-center justify-center md:w-1/2">
           <Link href="/" className="text-center">
             <div className="flex flex-col items-center space-y-4">
-              
               <div className="text-center">
                 <h1 className="text-4xl font-bold">
                   <span className="text-white">Quest</span>
